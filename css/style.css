@@ -17,9 +17,10 @@ body {
   background-image: url("../img/main-bg.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 300%; }
+  background-size: 300%;
+  cursor: default; }
 
-.wrapper {
+.container {
   max-width: 1140px;
   min-width: 320px;
   margin: auto;
@@ -122,6 +123,9 @@ main {
   margin-top: 30px;
   color: #fff; }
 
+.filmLeftWrapper {
+  display: flex; }
+
 .dataFilm {
   display: flex;
   align-items: center; }
@@ -140,7 +144,8 @@ main {
 .btn-WatchTrailer {
   display: flex;
   align-items: center;
-  margin-top: 26px; }
+  margin-top: 26px;
+  cursor: pointer; }
 
 .btn-MoreDetails {
   display: none;
@@ -332,7 +337,22 @@ b {
 
   .CTA-Block {
     padding: 0;
-    margin-left: 10%; } }
+    margin-left: 10%; }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75); }
+
+  .videoTrailer {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    z-index: 999; } }
 @media screen and (max-width: 930px) {
   .content {
     flex-wrap: wrap; }

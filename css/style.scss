@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;900&display=swap');
 
+@import 'scss/reset';
+
 $input-placeholder-color: #AEAEAE;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-ul {
-  list-style: none;
-}
 
 body {
   background-color: #0A090A;
@@ -23,9 +17,10 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 300%;
+  cursor: default;
 }
 
-.wrapper {
+.container {
   max-width: 1140px;
   min-width: 320px;
   margin: auto;
@@ -147,6 +142,11 @@ main {
   color: #fff;
 }
 
+.filmLeftWrapper {
+  display: flex;
+
+}
+
 .dataFilm {
   display: flex;
   align-items: center;
@@ -171,6 +171,7 @@ main {
   display: flex;
   align-items: center;
   margin-top: 26px;
+  cursor: pointer;
 }
 
 .btn-MoreDetails {
@@ -403,6 +404,24 @@ b {
   .CTA-Block {
     padding: 0;
     margin-left: 10%;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .videoTrailer {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    z-index: 999;
+    
   }
 }
 
