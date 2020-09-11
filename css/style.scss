@@ -7,6 +7,7 @@ $input-placeholder-color: #AEAEAE;
 
 
 body {
+  min-width: 340px;
   background-color: #0A090A;
   color: #000;
   font-family: 'Roboto', sans-serif;
@@ -22,7 +23,7 @@ body {
 
 .container {
   max-width: 1140px;
-  min-width: 320px;
+  min-width: 340px;
   margin: auto;
   padding: 0 20px;
 }
@@ -134,7 +135,7 @@ main {
   color: #787878;
 }
 
-.titleInfo{
+.titleInfo {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -164,8 +165,7 @@ main {
   font-weight: normal;
 }
 
-.releaseData {
-}
+.releaseData {}
 
 .btn-WatchTrailer {
   display: flex;
@@ -248,7 +248,7 @@ main {
   display: none;
 }
 
-.navigation .active{
+.navigation .active {
   color: #FF8F27;
 }
 
@@ -262,7 +262,7 @@ main {
   line-height: 140%;
 }
 
-.text-pd-16px{
+.text-pd-16px {
   margin-top: 16px;
 }
 
@@ -310,7 +310,7 @@ b {
   background-color: #FF8F27;
   border: none;
   border-radius: 0px 5px 5px 0px;
-  padding:  6px 0 6px 0;
+  padding: 6px 0 6px 0;
 }
 
 .ADV {
@@ -321,6 +321,14 @@ b {
 
 .MoreDetails {
   transform: rotate(90deg);
+}
+
+.overlay {
+  display: none;
+}
+
+.btn-WatchTrailer {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -361,7 +369,8 @@ b {
     margin: 0 45px 0 50px;
   }
 
-  .cover, .willBeWatch {
+  .cover,
+  .willBeWatch {
     width: 182px;
   }
 
@@ -407,12 +416,26 @@ b {
   }
 
   .overlay {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.75);
+  }
+
+  .video-player {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .active-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .videoTrailer {
@@ -421,7 +444,7 @@ b {
     right: 50%;
     transform: translateX(50%) translateY(-50%);
     z-index: 999;
-    
+
   }
 }
 
@@ -449,7 +472,7 @@ b {
     margin-bottom: 10px;
   }
 
-  .rolesList > li {
+  .rolesList>li {
     margin-bottom: 10px;
     text-decoration: underline;
   }
